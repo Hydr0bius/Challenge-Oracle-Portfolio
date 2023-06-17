@@ -6,6 +6,9 @@
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
+    font-size: var(--p-font);
+    background-color: var(--main-color);
+    color: var(--text-color);
 }
 :root{
     --main-color:#F5F5F5;
@@ -14,6 +17,90 @@
     --boton:#2A7AE4;
 
     --title-one: 2rem;
-    --tittle-two: 1.375rem
+    --tittle-two: 1.375rem;
     --p-font: 1rem;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    background: #0b5ac2;
+}
+body::-webkit-scrollbar-thumb{
+    background: #464646;
+    border-radius: 10px;
+    border-right: 2px solid #464646;
+}
+/* globales */
+
+/* header */
+.header{
+    width: 90%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0rem 0 4.5rem;
+    position: sticky;
+    top: 0;
+    opacity: 0.9;
+}
+.header_right{
+    display: flex;
+    font-weight: bold;
+}
+.imagen_vec{
+    margin-right: .9rem;
+}
+.header_nav ul{
+    display: flex;
+    
+}
+.header_nav ul li{
+    padding:1rem;
+}
+.header_nav ul li:hover{
+    font-weight: bold;
+}
+.header_nav ul li:last-child a{
+    font-weight: bold;
+}
+
+/* main */
+
+.profile{
+    width: 90%;
+    margin: 2rem 0rem 0 4.5rem;
+    display: flex;
+    height: 48vh;
+}
+.profile_right{
+    margin-top: 6vh;
+    width: 61%;
+}
+.profile_right h1{
+    font-size: 3.25rem;
+    font-weight: 700;
+}
+.profile_right p{
+    margin-top: 10px;
+    font-size: var(--tittle-two);
+}
+.profile_ul{
+    display: flex;
+}
+.profile_ul li{
+    padding: 2rem;
+}
+.profile_ul li:first-child{
+    padding-left: 0;
+}
+.profile_ul li:hover{
+    font-weight: bold;
+}
+.profile_ul li img{
+    margin-left: 5px;
+}
+.profile_picture{
+    width: 23rem;
+    height: 23rem;
+    border-radius: 50%;
+    margin-left: 3rem;
 }
