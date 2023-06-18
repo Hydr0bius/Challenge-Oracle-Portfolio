@@ -72,14 +72,15 @@ p{
 .header_nav ul li:last-child a{
     font-weight: bold;
 }
-
+.header_responsive{
+    display: none;
+}
 /* main */
 /* main profile */
 .profile{
     width: 90%;
-    margin: 2rem 0rem 0 4.5rem;
+    margin: 2rem 0rem 2rem 4.5rem;
     display: flex;
-    height: 48vh;
 }
 .profile_right{
     margin-top: 6vh;
@@ -103,9 +104,6 @@ p{
 }
 .profile_ul li:hover{
     font-weight: bold;
-}
-.profile_ul li img{
-    margin-left: 5px;
 }
 .profile_picture{
     width: 23rem;
@@ -275,7 +273,7 @@ p{
     flex-direction: column;
 }
 .contacto_form input{
-    width: 656px;
+    width: 100%;
     height: 56px;
     margin-bottom: 1rem;
     border: 0;
@@ -308,4 +306,105 @@ footer{
 }
 footer p{
     padding: 1rem;
+}
+
+/* responsive------------------------------- */
+@media (max-width:940px){
+    .header_nav{
+        display: none;
+    }
+    .header_responsive{
+        display: block;
+        font-weight: bold;
+    }
+    .profile_right h1{
+        font-size: 40px;
+    }
+    .profile_picture{
+        margin: 0;
+        width: 310px;
+        height: 310px;
+    }
+    .contacto_width img{
+        display: none;
+    }
+}
+@media (max-width:768px){
+
+    .header{
+        margin-left: 1rem;
+        position:relative;
+        margin-bottom: 1rem;
+    }
+    .profile{
+        margin-left: 1rem;
+    }
+    .profile_right{
+        margin-top: 1rem;
+    }
+    .profile_right h1{
+        font-size: 22px;
+    }
+    .profile ul li{
+        padding: .5rem;
+    }
+    .profile_picture{
+        width: 146px;
+        height: 146px;
+        margin-left: 1rem;
+    }
+    /* aboutme */
+    .aboutMe_div{
+        margin-left: 1rem;
+    }
+    .aboutMe_div p{
+        width: 100%;
+    }
+    /* section */
+    .hability, .formacion_width, .experiencia{
+        margin-left: 1rem;
+    }
+    /* formacion */
+    .formacion_gene{
+        width: 224px;
+        height: 118px;
+        margin: 5px;
+        padding: 0px;
+    }
+    .formacion_container ul li{
+        margin-left: 0rem;
+    }
+    /* experiencia */
+    .experiencia_div{
+        flex-direction: column;
+    }
+    .experiencia_boton{
+        margin: 0;
+    }
+   .exp_btn{
+        padding: .5rem;
+    }
+    .experiencia_container{
+        width: 60%;
+        margin-top: .5rem;
+    }
+    .experiencia_img{
+        order: -1;
+    }
+
+    /* contacto */
+
+    .contacto{
+        padding: 1rem;
+    }
+    .contacto_width{
+        margin-left: auto;
+    }
+    
+    .contacto_move{
+        margin-left: 0;
+    }
+    .contacto_move h2{
+        font-size: 22px;
+    }
 }
