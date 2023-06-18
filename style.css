@@ -169,9 +169,13 @@ p{
 }
 /* formacion & cursos */
 .formacion{
-    width: 90%;
-    margin: 2rem 0rem 2rem 4.5rem;
     background-color: var(--second-color);
+    padding: 2rem 0;
+}
+.formacion_width{
+    width: 90%;
+    margin: 2rem 0rem 2rem 4rem;
+
 }
 .formacion h2, .experiencia h2{
     text-align: center;
@@ -240,6 +244,68 @@ p{
     cursor: pointer;
 }
 .exp_two{
-    color: #fff;
-    background-color: var(--boton);
+    color: white;
+    border-color: black;
+    background: linear-gradient(to right, #000428,#004e92,#00F260);
+    background-size: 200% auto;
+    transition: all .3s cubic-bezier(.25,0.8,.25,1);
+}
+.exp_two:hover{
+    background-position: right center;
+    box-shadow: 3px 10px 10px rgb(0, 0, 0, 0.6);
+}
+.contacto{
+    background-color: var(--second-color);
+    padding: 8rem 0 4rem 0;
+}
+.contacto_width{
+    display: flex;
+    margin-left: 4rem;
+}
+.contacto_p{
+    margin-bottom: 1rem;
+}
+.contacto_width img{
+    width: 464px;
+    height: 593px;
+    padding-right: 1rem;
+}
+.contacto_form{
+    display: flex;
+    flex-direction: column;
+}
+.contacto_form input{
+    width: 656px;
+    height: 56px;
+    margin-bottom: 1rem;
+    border: 0;
+    outline: none;
+}
+.contacto_form input:focus{
+    color:#004e92;
+    font-weight: bold;
+}
+/* boton */
+.contacto_btn{
+    margin-top: 1rem;
+    width: 144px;
+    height: 51px;
+    background: linear-gradient(to right,#004e92,#65C7F7,#9CECFB);
+    background-size: 200% auto;
+    transition: all .3s cubic-bezier(.25,0.8,.25,1);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+.contacto_btn:hover{
+    background-position: right center;
+    color: #000428;
+    box-shadow: 3px 10px 10px rgb(0, 0, 0, 0.6);
+}
+footer{
+    text-align: center;
+    height: 7vh;
+}
+footer p{
+    padding: 1rem;
 }
