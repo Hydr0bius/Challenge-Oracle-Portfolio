@@ -50,6 +50,7 @@ p{
     top: 0;
     opacity: 0.9;
     background-color: var(--main-color);
+    z-index: 100%;
 }
 .header_right{
     display: flex;
@@ -169,15 +170,17 @@ p{
 /* formacion & cursos */
 .formacion{
     width: 90%;
-    margin: 2rem 0rem 0 4.5rem;
+    margin: 2rem 0rem 2rem 4.5rem;
     background-color: var(--second-color);
 }
-.formacion h2{
+.formacion h2, .experiencia h2{
     text-align: center;
+    margin-bottom: 2rem;
 }
-.formacion_div{
+.formacion_div, .experiencia_div{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 .formacion_container ul li{
     margin-left: 2rem;
@@ -206,4 +209,37 @@ p{
 }
 .formacion_imageTwo{
     background-image: url(image/alura_logo.png);
+}
+
+/* experiencia profecional */
+.experiencia{
+    width: 90%;
+    margin: 2rem 0rem 2rem 4.5rem;
+}
+.experiencia_div{
+    align-items: center;
+}
+.experiencia_div img{
+    width: 60%;
+}
+.experiencia_container{
+    width: 35%;
+    height: 20vh;
+    margin-left: 3%;
+}
+.experiencia_boton{
+    margin: 1rem;
+}
+.exp_btn{
+    margin: .5rem;
+    padding: 1rem;
+    background-color: var(--main-color);
+    color: var(--boton);
+    border-color: var(--boton);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.exp_two{
+    color: #fff;
+    background-color: var(--boton);
 }
