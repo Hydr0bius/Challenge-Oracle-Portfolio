@@ -408,3 +408,38 @@ footer p{
         font-size: 22px;
     }
 }
+@media(max-width:444px){
+    .header_responsive{
+        display: none;
+    }
+    .profile{
+        flex-direction: column;
+    }
+    .profile_picture{
+        order: -1;
+    }
+    .profile_right{
+        width: 90%;
+    }
+    .profile_ul{
+        width: 120%;
+        font-size: 14px;
+    }
+
+    .skills_container{
+        width: 110%;
+        margin: 0;
+    }
+    .skills_container_div{
+        width: 156px;
+        height: 118px;
+        margin: .2rem;
+    }
+
+    .aboutMe{
+        height: 60vh;
+    }
+    .experiencia_container{
+        width: 90%;
+    }
+}
