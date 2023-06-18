@@ -166,3 +166,44 @@ p{
     padding: .5rem;
     font-weight: bold;
 }
+/* formacion & cursos */
+.formacion{
+    width: 90%;
+    margin: 2rem 0rem 0 4.5rem;
+    background-color: var(--second-color);
+}
+.formacion h2{
+    text-align: center;
+}
+.formacion_div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.formacion_container ul li{
+    margin-left: 2rem;
+}
+.formacion_container ul li:nth-child(2){
+    font-weight: bold;
+}
+.formacion_gene{
+    width: 368px;
+    height: 286px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 1rem;
+    transition-duration: 0.5s;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.formacion_gene:hover{
+    scale: 1.1;
+    box-shadow: 4px 4px 40px rgb(0, 0, 0, 0.6);
+}
+.formacion_imageOne{
+    background-image: url(image/logo\ UTM-01.png);
+    background-size: cover;
+}
+.formacion_imageTwo{
+    background-image: url(image/alura_logo.png);
+}
