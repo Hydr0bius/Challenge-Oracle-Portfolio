@@ -33,6 +33,10 @@ h2{
     font-size: 2rem;
     font-weight: 700;
 }
+h2:hover{
+    text-shadow: red -3px 0,
+                 cyan 3px 0;
+}
 h3{
     font-size: 1.375rem;
 }
@@ -110,6 +114,7 @@ p{
     height: 23rem;
     border-radius: 50%;
     margin-left: 3rem;
+    box-shadow: 12px 15px 20px rgb(0, 0, 0, 0.6);
 }
 /* main about me */
 .aboutMe{
@@ -326,7 +331,18 @@ footer{
 footer p{
     padding: 1rem;
 }
-
+/* efecto con js */
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
 /* responsive------------------------------- */
 @media (max-width:940px){
     .header_nav{
