@@ -236,7 +236,58 @@
         </section>
 
         <section class="contacto">
-            
+            <div class="contacto_width">
+                <img src="./image/contact_image.png" alt="">
+                <div class="contacto_move">
+                    <h2>Contacto</h2>
+                    <p>¿Quieres contactame?<br>Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
+                    <form action="" class="formulario" id="formulario">
+                        <!-- nombre -->
+                        <div class="form_grupo" id="grupo_nombre">
+                            <label for="nombre" class="form_label">Nombre</label>
+                            <div class="form_grupo_input">
+                                <input type="text" class="form_input" name="nombre" id="nombre" placeholder="Nombre">
+                                <i class="form_validacion_estado fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="form_input_error">Solo puede contener letars y espacios.</p>
+                        </div>
+                        <!-- correo -->
+                        <div class="form_grupo" id="grupo_correo">
+                            <label for="correo" class="form_label">Correo</label>
+                            <div class="form_grupo_input">
+                                <input type="email" class="form_input" name="correo" id="correo" placeholder="E-mail">
+                                <i class="form_validacion_estado fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="form_input_error">Solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                        </div>
+                        <!-- asunto -->
+                        <div class="form_grupo" id="grupo_asunto">
+                            <label for="asunto" class="form_label">Asunto</label>
+                            <div class="form_grupo_input">
+                                <input type="text" class="form_input" name="asunto" id="asunto" placeholder="Asunto">
+                                <i class="form_validacion_estado fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="form_input_error">Solo puede contener letras, numeros, puntos, guiones y guion bajo</p>
+                        </div>
+                        <!-- textarea -->
+                        <div class="form_grupo" id="grupo_textarea">
+                            <label for="mensaje" class="form_label">Mensaje</label>
+                            <div class="form_grupo_input">
+                                <textarea class="form_input label_height" rows="5" cols="40" id="mensaje" name="mensaje" placeholder="Mensaje"></textarea>
+                            </div>
+                            <p class="form_input_error"></p>
+                        </div>
+                        <!-- advertencia y boton -->
+                        <div class="form_mensaje" id="form_mensaje">
+                            <p><i class="fa-solid fa-triangle-exclamation"></i><b> Error:</b>
+                            Favor de rellenar los campos correctamente</p>
+                        </div>
+                        <div class="form_grupo form_grupo_btn_enviar">
+                            <button class="contacto_btn" type="submit">Enviar mensaje</button>
+                            <p class="form_mensaje_exito" id="form_mensaje_exito">
+                                El Formulario se ha enviado exitosamente
+                            </p>
+                        </div>
                     </form>
                 </div>
             </div>
