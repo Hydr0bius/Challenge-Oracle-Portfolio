@@ -51,6 +51,7 @@ inputs.forEach((input) =>{
 });
 
 formulario.addEventListener('submit', (e)=>{
+	e.preventDefault();
     if (campos.nombre && campos.correo && campos.asunto) {
         formulario.reset();
 
