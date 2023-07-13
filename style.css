@@ -54,7 +54,7 @@ p{
     top: 0;
     opacity: 0.9;
     background-color: var(--main-color);
-    z-index: 100%;
+    z-index: 999;
 }
 .header_right{
     display: flex;
@@ -63,21 +63,26 @@ p{
 .imagen_vec{
     margin-right: .9rem;
 }
-.header_nav ul{
+.header_nav{
     display: flex;
     
 }
-.header_nav ul li{
+.header_nav li{
     padding:1rem;
 }
-.header_nav ul li:hover{
+.header_nav li:hover{
     font-weight: bold;
 }
-.header_nav ul li:last-child a{
+.header_nav li:last-child a{
     font-weight: bold;
 }
-.header_responsive{
+#close{
+    align-items: center;
     display: none;
+}
+#mobile{
+    display: none;
+    align-items: center;
 }
 /* main */
 /* main profile */
@@ -332,7 +337,7 @@ footer p{
 }
 /* responsive------------------------------- */
 @media (max-width:940px){
-    .header_nav{
+    .header_nav li:nth-child(6){
         display: none;
     }
     .header_responsive{
@@ -351,9 +356,48 @@ footer p{
 @media (max-width:768px){
 
     .header{
-        margin-left: 1rem;
-        position:relative;
+        margin: 0;
+        width: 100%;
+        height: 4vh;
         margin-bottom: 1rem;
+        opacity: 1;
+    }
+    .header_nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #EAF2FD;
+        box-shadow: 0 40px 60px rgba(2, 77, 189, 0.2);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+    .header_nav.active{
+        right: 0px;
+    }
+    .header_nav li{
+        margin-bottom: 25px;
+    }
+    #mobile{
+        display: flex;
+    }
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 22px;
     }
     .profile{
         margin-left: 1rem;
@@ -413,9 +457,6 @@ footer p{
 
 }
 @media(max-width:444px){
-    .header_responsive{
-        display: none;
-    }
     .profile{
         flex-direction: column;
     }
