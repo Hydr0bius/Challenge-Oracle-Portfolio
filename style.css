@@ -6,15 +6,12 @@
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
-    font-size: var(--p-font);
     color: #464646;
 }
 :root{
     --main-color:#F5F5F5;
     --second-color:#EAF2FD;
     --boton:#2A7AE4;
-    
-    --p-font: ;
 }
 body{
     background-color: var(--main-color);
@@ -29,6 +26,12 @@ body::-webkit-scrollbar-thumb{
     border-right: 2px solid #464646;
 }
 /* globales */
+.sect_pad{
+    padding: 4rem 0rem 2rem 4.5rem;
+}
+.sect_nav{
+    padding-top: 2rem;
+}
 h2{
     font-size: 2rem;
     font-weight: 700;
@@ -40,19 +43,17 @@ h2:hover{
 h3{
     font-size: 1.375rem;
 }
-p{
-    font-size: var(--p-font);
-}
 /* header */
 .header{
-    width: 90%;
+    width: 100%;
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem 0rem 0 4.5rem;
+    padding: 1rem 2rem;
     position: sticky;
     top: 0;
     opacity: 0.9;
+    background-color: red;
     background-color: var(--main-color);
     z-index: 999;
 }
@@ -61,17 +62,25 @@ p{
     font-weight: bold;
 }
 .imagen_vec{
-    margin-right: .9rem;
+    padding-right: .5rem;
 }
 .header_nav{
-    display: flex;
-    
+    display: flex;   
 }
-.header_nav li{
-    padding:1rem;
+.header_nav li a{
+    display: inline-block;
+	padding: 15px;
+	line-height: normal;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	border-bottom: 2px solid transparent;
+	font-size: 15px;
+	margin-right: 5px;
 }
-.header_nav li:hover{
+.header_nav li a:hover{
     font-weight: bold;
+    border-bottom: 2px solid var(--boton);
+	padding-bottom: 5px;
 }
 .header_nav li:last-child a{
     font-weight: bold;
@@ -87,21 +96,35 @@ p{
 /* main */
 /* main profile */
 .profile{
-    width: 90%;
-    margin: 2rem 0rem 2rem 4.5rem;
+    width: 100%;
+    /* height: 50vh; */
     display: flex;
 }
 .profile_right{
-    margin-top: 6vh;
+    padding-top: 4vh;
     width: 61%;
 }
-.profile_right h1{
+/* animacion type */
+.profile_right .cont_text h1,
+.cont_text_animation{
     font-size: 3.25rem;
     font-weight: 700;
 }
-.profile_right p{
-    margin-top: 10px;
+.profile_right .cont_text{
+    height: 20vh;
 }
+.cont_text_one{
+    display: flex;
+}
+.type_bar{
+    width: 3px;
+    height: 3.25rem;
+    margin-left: 5px;
+    background-color: #464646;
+    transform: rotateZ(15deg);
+    animation: barra-animacion 1s ease infinite;
+}
+/* fin de animacion */
 .profile_ul{
     display: flex;
 }
@@ -119,43 +142,11 @@ p{
     height: 23rem;
     border-radius: 50%;
     margin-left: 3rem;
-    /* box-shadow: 12px 15px 20px rgb(0, 0, 0, 0.6); */
     background-image: url("image/IMG_20230620_101151_HDR.jpg");
     background-size: cover;
     border-radius: 50%;
     transform: translateX(0);
     animation: 1.5s movercaja infinite;
-}
-/* keyframe para la imagen */
-@keyframes movercaja{
-    50%{
-        transform: translateY(-3px);
-    }
-}
-.profile_picture::before{
-    position: absolute;
-    content: "";
-    top: 100%;
-    left: 5%;
-    height: 15px;
-    width: 90%;
-    opacity: 0;
-    background: -webkit-radial-gradient(
-        center, ellipse,
-        rgba(0,0,0,0.35) 0%,
-        rgba(0,0,0,0) 80%);
-    transition-duration: 0.3s;
-}
-.profile_picture:before{
-    opacity: 0.4;
-    transform: translateY(6px);
-    animation: 1.5s moversombra infinite;
-}
-@keyframes moversombra{
-    50%{
-        opacity: 1;
-        transform: translateY(3px);
-    }
 }
 /* main about me */
 .aboutMe{
@@ -167,45 +158,47 @@ p{
 .aboutMe_div{
     align-items: center;
     width: 90%;
-    margin: 2rem 0 2rem 4.5rem;
 }
 .aboutMe_div p{
     width: 65%;
     margin-top: 1rem;
 }
-
 /* skills */
 .hability{
-    width: 90%;
-    margin: 2rem 0rem 0 4.5rem;
+    width: 100%;
 }
 .hability h2{
     text-align: center;
 }
-.skills, .hobbies{
+.hobbies{
     width: 100%;
+    padding-top: 5rem;
 }
 .skills_container{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    margin: 2rem 0;
+    justify-content: center;
+    padding: 2rem 0;
 }
 .skills_container_div{
     margin: 1rem .8rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    /* align-items: flex-start; */
     width: 176px;
     height: 174px;
-    background-color: #fff;
-    border-radius: 10px;
-    transition-duration: 0.4s;
+    background: linear-gradient(#fff, #fff, #ebf5fc);
+    border-radius: 6px;
+    transition-duration: 0.3s;
+    box-shadow: inset 0 5px 1px 0 rgba(0,0,0,0.1),
+                      0 5px 15px rgba(0,0,0,0.1),
+                      0 -5px 15px rgba(0,0,0,0.15);
 }
-.skills_container_div:hover{
-    scale: 1.2;
-    box-shadow: 4px 4px 40px rgb(0, 0, 0, 0.6);
+.skills_container_div:hover,
+.formacion_gene:hover{
+    scale: 1.1;
+    box-shadow: inset 0 -5px 0 0 rgba(0,0,0,0.2),
+                      0 2px 10px rgba(0,0,0,0.75);
 }
 .skills_container_div ul, .skills_container_div ul li{
     padding: .5rem;
@@ -218,12 +211,13 @@ p{
 }
 .formacion_width{
     width: 90%;
-    margin: 2rem 0rem 2rem 4rem;
-
 }
 .formacion h2, .experiencia h2{
     text-align: center;
     margin-bottom: 2rem;
+}
+.formacion_div{
+    justify-content: center;
 }
 .formacion_div, .experiencia_div{
     display: flex;
@@ -243,13 +237,12 @@ p{
     background-color: #fff;
     border-radius: 10px;
     margin: 1rem;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     background-repeat: no-repeat;
     background-position: center;
-}
-.formacion_gene:hover{
-    scale: 1.1;
-    box-shadow: 4px 4px 40px rgb(0, 0, 0, 0.6);
+    box-shadow: inset 0 5px 1px 0 rgba(0,0,0,0.1),
+                      0 5px 15px rgba(0,0,0,0.1),
+                      0 -5px 15px rgba(0,0,0,0.15);
 }
 .formacion_imageOne{
     background-image: url(image/logo\ UTM-01.png);
@@ -270,17 +263,12 @@ p{
     background-image: url(image/VisualStudio.jpg);
     background-size: cover;
 }
-.scale:hover{
-    scale: 1.3;
-}
-
 /* experiencia profecional */
 .exp_he{
     height: 5vh;
 }
 .experiencia{
-    width: 90%;
-    margin: 2rem 0rem 2rem 4.5rem;
+    padding: 5rem 0rem 2rem 4.5rem;
 }
 .experiencia_div{
     align-items: center;
@@ -323,20 +311,58 @@ footer{
 footer p{
     padding: 1rem;
 }
-/* efecto con js */
 .hidden{
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
     transition: all 1s;
 }
+/* efecto de movimiento con js */
 .show{
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
 }
-/* responsive------------------------------- */
-@media (max-width:940px){
+/* animaciones -------------------------------------------------------*/
+/* animacion type */
+@keyframes barra-animacion{
+    50%{
+        height: 20px;
+    }
+}
+/* keyframe para la imagen */
+@keyframes movercaja{
+    50%{
+        transform: translateY(-3px);
+    }
+}
+.profile_picture::before{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 5%;
+    height: 15px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(
+        center, ellipse,
+        rgba(0,0,0,0.35) 0%,
+        rgba(0,0,0,0) 80%);
+    transition-duration: 0.3s;
+}
+.profile_picture:before{
+    opacity: 0.4;
+    transform: translateY(6px);
+    animation: 1.5s moversombra infinite;
+}
+@keyframes moversombra{
+    50%{
+        opacity: 1;
+        transform: translateY(3px);
+    }
+}
+/* responsivo ------------------------------------------------------ */
+@media (max-width:1078px){
     .header_nav li:nth-child(6){
         display: none;
     }
@@ -344,23 +370,47 @@ footer p{
         display: block;
         font-weight: bold;
     }
-    .profile_right h1{
-        font-size: 40px;
+    .profile_right .cont_text h1,
+    .cont_text_animation{
+        font-size: 2.5rem;
+    }
+    .type_bar{
+        height: 2.5rem;
     }
     .profile_picture{
         margin: 0;
         width: 310px;
         height: 310px;
     }
+    .profile_right .cont_text{
+        height: 15vh;
+    }
+    .profile_ul li{
+        padding: 15px;
+    }
+}
+@media (max-width:840px){
+    .profile_right .cont_text h1,
+    .cont_text_animation{
+        font-size: 2rem;
+    }
+    .type_bar{
+        height: 2rem;
+    }
+    .experiencia{
+        padding: 5rem 0rem 2rem 1rem;
+    }
 }
 @media (max-width:768px){
-
+    .sect_pad{
+        padding: 2rem 0rem 2rem 1rem;
+    }
     .header{
         margin: 0;
         width: 100%;
         height: 4vh;
-        margin-bottom: 1rem;
         opacity: 1;
+        padding: 0 .3rem;
     }
     .header_nav{
         display: flex;
@@ -373,15 +423,12 @@ footer p{
         height: 100vh;
         width: 300px;
         background-color: #EAF2FD;
-        box-shadow: 0 40px 60px rgba(2, 77, 189, 0.2);
+        box-shadow: 0 40px 60px rgba(2, 77, 189, 0.3);
         padding: 80px 0 0 10px;
         transition: 0.3s;
     }
     .header_nav.active{
         right: 0px;
-    }
-    .header_nav li{
-        margin-bottom: 25px;
     }
     #mobile{
         display: flex;
@@ -399,14 +446,18 @@ footer p{
         color: #222;
         font-size: 22px;
     }
-    .profile{
-        margin-left: 1rem;
-    }
     .profile_right{
-        margin-top: 1rem;
+        padding-top: 0rem;
     }
-    .profile_right h1{
-        font-size: 22px;
+    .profile_right .cont_text h1,
+    .cont_text_animation{
+        font-size: 1.375rem;
+    }
+    .type_bar{
+        height: 1.375rem;
+    }
+    .profile_right .cont_text{
+        height: 10vh;
     }
     .profile ul li{
         padding: .5rem;
@@ -417,25 +468,8 @@ footer p{
         margin-left: 1rem;
     }
     /* aboutme */
-    .aboutMe_div{
-        margin-left: 1rem;
-    }
     .aboutMe_div p{
         width: 100%;
-    }
-    /* section */
-    .hability, .formacion_width, .experiencia{
-        margin-left: 1rem;
-    }
-    /* formacion */
-    .formacion_gene{
-        width: 224px;
-        height: 118px;
-        margin: 5px;
-        padding: 0px;
-    }
-    .formacion_container ul li{
-        margin-left: 0rem;
     }
     /* experiencia */
     .experiencia_div{
@@ -449,12 +483,10 @@ footer p{
     }
     .experiencia_container{
         width: 60%;
-        margin-top: .5rem;
     }
     .experiencia_img{
         order: -1;
     }
-
 }
 @media(max-width:444px){
     .profile{
@@ -466,25 +498,23 @@ footer p{
     .profile_right{
         width: 90%;
     }
-    .profile_ul{
-        width: 120%;
-        font-size: 14px;
+    .profile_ul li{
+        padding: 2px;
     }
-
-    .skills_container{
-        width: 110%;
-        margin: 0;
-    }
-    .skills_container_div{
-        width: 156px;
-        height: 118px;
-        margin: .2rem;
-    }
-
     .aboutMe{
         height: 60vh;
     }
     .experiencia_container{
         width: 90%;
+    }
+    /* formacion */
+    .formacion_gene{
+        width: 224px;
+        height: 200px;
+        padding: 0px;
+        background-size: contain;
+    }
+    .formacion_container ul li{
+        margin-left: 0rem;
     }
 }
