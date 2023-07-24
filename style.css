@@ -27,7 +27,7 @@ body::-webkit-scrollbar-thumb{
 }
 /* globales */
 .sect_pad{
-    padding: 4rem 0rem 2rem 4.5rem;
+    padding: 5rem 0rem 2rem 4.5rem;
 }
 .sect_nav{
     padding-top: 2rem;
@@ -97,12 +97,13 @@ h3{
 /* main profile */
 .profile{
     width: 100%;
-    /* height: 50vh; */
+    height: 70vh;
     display: flex;
 }
 .profile_right{
     padding-top: 4vh;
     width: 61%;
+    position: relative;
 }
 /* animacion type */
 .profile_right .cont_text h1,
@@ -110,9 +111,9 @@ h3{
     font-size: 3.25rem;
     font-weight: 700;
 }
-.profile_right .cont_text{
+/* .profile_right .cont_text{
     height: 20vh;
-}
+} */
 .cont_text_one{
     display: flex;
 }
@@ -125,6 +126,10 @@ h3{
     animation: barra-animacion 1s ease infinite;
 }
 /* fin de animacion */
+.cont_text_dos{
+    position: absolute;
+    bottom: 0px;
+}
 .profile_ul{
     display: flex;
 }
@@ -150,7 +155,7 @@ h3{
 }
 /* main about me */
 .aboutMe{
-    height: 40vh;
+    height: 55vh;
     background-color: var(--second-color);
     display: flex;
     align-items: center;
@@ -382,14 +387,14 @@ footer p{
         width: 310px;
         height: 310px;
     }
-    .profile_right .cont_text{
-        height: 15vh;
-    }
     .profile_ul li{
         padding: 15px;
     }
 }
 @media (max-width:840px){
+    .profile_right{
+        height: 40vh;
+    }
     .profile_right .cont_text h1,
     .cont_text_animation{
         font-size: 2rem;
@@ -447,6 +452,7 @@ footer p{
         font-size: 22px;
     }
     .profile_right{
+        height: 35vh;
         padding-top: 0rem;
     }
     .profile_right .cont_text h1,
@@ -456,11 +462,15 @@ footer p{
     .type_bar{
         height: 1.375rem;
     }
-    .profile_right .cont_text{
-        height: 10vh;
+    .profile{
+        height: 40vh;
     }
+    /* .profile_right .cont_text{
+        height: 10vh;
+    } */
     .profile ul li{
         padding: .5rem;
+        font-size: 12px;
     }
     .profile_picture{
         width: 146px;
@@ -491,6 +501,7 @@ footer p{
 @media(max-width:444px){
     .profile{
         flex-direction: column;
+        height: 70vh;
     }
     .profile_picture{
         order: -1;
