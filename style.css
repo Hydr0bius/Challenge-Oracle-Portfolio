@@ -155,7 +155,7 @@ h3{
 }
 /* main about me */
 .aboutMe{
-    height: 55vh;
+    height: 65vh;
     background-color: var(--second-color);
     display: flex;
     align-items: center;
@@ -165,8 +165,10 @@ h3{
     width: 90%;
 }
 .aboutMe_div p{
-    width: 65%;
-    margin-top: 1rem;
+    width: 90%;
+    margin-top: .5rem;
+    text-align: justify;
+    text-indent:1rem;
 }
 /* skills */
 .hability{
@@ -478,6 +480,9 @@ footer p{
         margin-left: 1rem;
     }
     /* aboutme */
+    .aboutMe{
+        height: 75vh;
+    }
     .aboutMe_div p{
         width: 100%;
     }
@@ -511,9 +516,6 @@ footer p{
     }
     .profile_ul li{
         padding: 2px;
-    }
-    .aboutMe{
-        height: 60vh;
     }
     .experiencia_container{
         width: 90%;
