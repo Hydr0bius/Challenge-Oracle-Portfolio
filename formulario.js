@@ -1,5 +1,6 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
+const btn = document.getElementById('button');
 
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,50}$/,
@@ -49,12 +50,26 @@ inputs.forEach((input) =>{
     input.addEventListener('keyup', validarFormulario);
     input.addEventListener('blur', validarFormulario);
 });
+// -------------------------------------------------------------
+ formulario.addEventListener('submit', function(event) {
+   event.preventDefault();
 
-formulario.addEventListener('submit', (e)=>{
-	e.preventDefault();
+   btn.value = 'Enviando...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_uhvl9y8';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Enviado!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+
     if (campos.nombre && campos.correo && campos.asunto) {
         formulario.reset();
-
         document.getElementById('form_mensaje_exito').classList.add('form_mensaje_exito-act');
         setTimeout(()=>{
             document.getElementById('form_mensaje_exito').classList.remove('form_mensaje_exito-act');
