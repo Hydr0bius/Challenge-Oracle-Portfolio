@@ -317,6 +317,65 @@ h3{
     background-position: right center;
     box-shadow: 3px 10px 10px rgb(0, 0, 0, 0.6);
 }
+/* experiencia practicas con descripcion */
+.galeria{
+    margin: 20px auto;
+    border-top: 2px solid rgb(56, 56, 56,0.5);
+}
+.galeria .imagen{
+    max-width: 700px;
+    display: inline-block;
+    position: relative;
+    width: 29%;
+    margin: 10px 20px;
+    box-shadow: inset 0 5px 1px 0 rgba(0,0,0,0.1),
+                      0 5px 15px rgba(0,0,0,0.1),
+                      0 -5px 15px rgba(0,0,0,0.15);
+}
+.galeria img{
+    width: 100%;
+    vertical-align: top;
+    border-radius: 10px;
+}
+.galeria  .imagen .overlay{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    background: rgba(26, 131, 230, 0.9);
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: 1s all ease;
+    text-align: justify;
+    border-radius: 10px;
+}
+.galeria  .imagen .overlay p{
+    font-weight: normal;
+    color: white;
+    margin-top: 10%;
+    line-height: 22px;
+}
+.galeria .imagen:hover .overlay{
+    opacity: 1;
+}
+.link{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.link a{
+    padding: 0 15px;
+}
+.link a i{
+    font-size: 22px;
+    color: rgb(44, 43, 43);
+    transition: 1s ease;
+}
+.link a i:hover{
+    color: black;
+}
+/* footer */
 footer{
     text-align: center;
     height: 7vh;
@@ -397,6 +456,12 @@ footer p{
     }
     .profile_ul li{
         padding: 15px;
+    }
+    .galeria .imagen{
+        width: 42%;
+    }
+    .galeria .imagen .overlay p{
+        font-size: 16px;
     }
 }
 @media (max-width:840px){
@@ -507,6 +572,9 @@ footer p{
     }
     .experiencia_img{
         order: -1;
+    }
+    .galeria .imagen{
+        width: 90%;
     }
 }
 @media(max-width:444px){
